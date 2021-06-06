@@ -47,12 +47,13 @@ const ColorComp: React.FC = () => {
         <Box>
           <MainGrid container spacing={2}>
             <Grid item xs={8}>
-              Background Color : {Color.color}
+              Background Color : <span data-testid='Cname'>{Color.color}</span>
             </Grid>
             <MainGrid item xs={8}>
               <Button
                 variant='contained'
                 color='secondary'
+                data-testid='changeBgColor'
                 onClick={() => changeColor()}
               >
                 Change BG Color
